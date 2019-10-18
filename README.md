@@ -14,5 +14,11 @@ de crear grupos y eventos y facilitar así la práctica del deporte que le guste
 
 ### Página de Inicio
 
+![pagina inicio](src\img\diseñoInicio.png "Página de inicio")
+
 ### Página de Evento
+
+![pagina evento](src\img\diseñoEvento.png "Página de evento")
+
+### Perfil usuario
 
