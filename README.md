@@ -22,4 +22,4 @@ de crear grupos y eventos y facilitar así la práctica del deporte que le guste
 
 ### Perfil usuario
 
-![perfil usuario]( "Perfil de usuario")
+![perfil usuario](https://github.com/fullstacktf/SocialSport-Frontend/blob/develop/src/img/dise%C3%B1oUsuarioV1.JPG "Perfil de usuario")
