@@ -14,11 +14,11 @@ de crear grupos y eventos y facilitar así la práctica del deporte que le guste
 
 ### Página de Inicio
 
-![pagina inicio](src\img\diseñoInicio.png "Página de inicio")
+![pagina inicio](https://github.com/fullstacktf/SocialSport-Frontend/blob/develop/src/img/dise%C3%B1oInicio.png "Página de inicio")
 
 ### Página de Evento
 
-![pagina evento](src\img\diseñoEvento.png "Página de evento")
+![pagina evento](https://github.com/fullstacktf/SocialSport-Frontend/blob/develop/src/img/dise%C3%B1oEvento.png "Página de evento")
 
 ### Perfil usuario
 
