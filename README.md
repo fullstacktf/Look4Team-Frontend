@@ -19,5 +19,5 @@ de crear grupos y eventos y facilitar así la práctica del deporte que le guste
 
 ### Página de Evento
 
-![pagina evento](https://github.com/fullstacktf/Look4Team-Frontend/blob/master/src/img/dise%C3%B1oIncio.png "Página de evento")
+![pagina evento](https://github.com/fullstacktf/Look4Team-Frontend/blob/master/src/img/dise%C3%B1oEvento.png?raw=true  "Página de evento")
 
