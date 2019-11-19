@@ -11,15 +11,12 @@ de crear grupos y eventos y facilitar así la práctica del deporte que le guste
  - [Jesús Ramos](https://github.com/JeramDev)
 
 ## Diseño
+[Prototipo Interactivo en Figma](https://www.figma.com/proto/zGyBqY02SmXFSaEDslS1JS/look4.team?node-id=1%3A2&scaling=scale-down-width)
 
 ### Página de Inicio
 
-![pagina inicio](https://github.com/fullstacktf/SocialSport-Frontend/blob/develop/src/img/dise%C3%B1oInicio.png "Página de inicio")
+![pagina inicio](https://github.com/fullstacktf/SocialSport-Frontend/blob/develop/src/img/src/img/diseñoIncio.png "Página de inicio")
 
 ### Página de Evento
 
-![pagina evento](https://github.com/fullstacktf/SocialSport-Frontend/blob/develop/src/img/dise%C3%B1oEvento.png "Página de evento")
-
-### Perfil usuario
-
-![perfil usuario](https://github.com/fullstacktf/SocialSport-Frontend/blob/develop/src/img/dise%C3%B1oUsuarioV1.JPG "Perfil de usuario")
+![pagina evento](https://github.com/fullstacktf/SocialSport-Frontend/blob/develop/src/img/diseñoEvento.png "Página de evento")
