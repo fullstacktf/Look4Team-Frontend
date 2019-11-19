@@ -15,8 +15,9 @@ de crear grupos y eventos y facilitar así la práctica del deporte que le guste
 
 ### Página de Inicio
 
-![pagina inicio](https://github.com/fullstacktf/SocialSport-Frontend/blob/develop/src/img/src/img/diseñoIncio.png "Página de inicio")
+![pagina inicio](https://github.com/fullstacktf/Look4Team-Frontend/blob/master/src/img/dise%C3%B1oIncio.png?raw=true "Página de inicio")
 
 ### Página de Evento
 
-![pagina evento](https://github.com/fullstacktf/SocialSport-Frontend/blob/develop/src/img/diseñoEvento.png "Página de evento")
+![pagina evento](https://github.com/fullstacktf/Look4Team-Frontend/blob/master/src/img/dise%C3%B1oIncio.png "Página de evento")
+
