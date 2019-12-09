@@ -4,10 +4,10 @@ nodejs:
 branches:
   only:
     - master
-# script: 
+  script: 
 #   - npm run lint
 #   - npm test
-#   - npm run build
+    - npm run build
 env:
   global:
     - REMOTE_PATH=/var/www/look4.team/
