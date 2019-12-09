@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/fullstacktf/Look4Team-Frontend.svg?branch=master)](https://travis-ci.org/fullstacktf/Look4Team-Frontend)
+
 # Look4Players - Frontend
 
 Web que permite a los usuarios encontrar gente de su zona y con sus mismos intereses deportivos con el objetivo

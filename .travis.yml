@@ -4,16 +4,15 @@ nodejs:
 branches:
   only:
     - master
-  script: 
+script: 
+  - npm run build
 #   - npm run lint
-#   - npm test
-    - npm run build
+#   - npm test    
 env:
   global:
     - REMOTE_PATH=/var/www/look4.team/
     - REMOTE_USER=deploy
     - REMOTE_HOST=167.172.168.233
-    - DEPLOY_DIR=build
 before_install:
   - bash scripts/install.sh
 after_success:
