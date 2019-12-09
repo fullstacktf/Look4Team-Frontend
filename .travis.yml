@@ -1,13 +1,19 @@
 language: node_js
 nodejs:
   - stable
-branches:
-  only:
-    - master
-script: 
-  - npm run build
-#   - npm run lint
-#   - npm test    
+jobs:
+  include:
+    - stage: Unit Tests      
+      script: npm test
+    - stage: Build
+      script: npm run build
+    - stage: Deploy
+      script: bash scripts/deploy.sh 
+stages:
+  - name: Unit Tests
+  - name: Build
+  - name: Deploy
+    if: branch = master AND type = push
 env:
   global:
     - REMOTE_PATH=Uploads
@@ -15,5 +21,3 @@ env:
     - REMOTE_HOST=167.172.168.233
 before_install:
   - bash scripts/install.sh
-after_success:
-  - bash scripts/deploy.sh
