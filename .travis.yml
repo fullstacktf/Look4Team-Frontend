@@ -8,16 +8,14 @@ jobs:
     - stage: Build
       script: npm run build
     - stage: Deploy
+      before_install: bash scripts/install.sh
+      env:
+        - REMOTE_PATH=Uploads
+        - REMOTE_USER=deploy
+        - REMOTE_HOST=167.172.168.233
       script: bash scripts/deploy.sh 
 stages:
   - name: Unit Tests
   - name: Build
   - name: Deploy
     if: branch = master AND type = push
-env:
-  global:
-    - REMOTE_PATH=Uploads
-    - REMOTE_USER=deploy
-    - REMOTE_HOST=167.172.168.233
-before_install:
-  - bash scripts/install.sh
