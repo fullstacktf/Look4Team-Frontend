@@ -1,6 +1,6 @@
 # Look4Players - Frontend
 
-| Branch   | Status              |
+| Rama     | Estado              |
 | ---------|:-------------------:|
 | Master   | [![Build Status](https://travis-ci.org/fullstacktf/Look4Team-Frontend.svg?branch=master)](https://travis-ci.org/fullstacktf/Look4Team-Frontend)  |
 | Develop  | [![Build Status](https://travis-ci.org/fullstacktf/Look4Team-Frontend.svg?branch=develop)](https://travis-ci.org/fullstacktf/Look4Team-Frontend) |
