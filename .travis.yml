@@ -1,0 +1,19 @@
+language: node_js
+nodejs:
+  - stable
+branches:
+  only:
+    - master
+# script: 
+#   - npm run lint
+#   - npm test
+#   - npm run build
+env:
+  global:
+    - REMOTE_PATH=/var/www/look4.team/
+    - REMOTE_USER=deploy
+    - REMOTE_HOST=167.172.168.233
+before_install:
+  - bash scripts/install.sh
+after_success:
+  - bash scripts/deploy.sh
