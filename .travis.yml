@@ -5,7 +5,7 @@ jobs:
   include:
     - stage: Unit Tests      
       script: npm test
-    - stage: Build
+    - stage: Build Test
       script: npm run build
     - stage: Deploy
       before_install: bash scripts/install.sh
@@ -13,9 +13,12 @@ jobs:
         - REMOTE_PATH=Uploads
         - REMOTE_USER=deploy
         - REMOTE_HOST=167.172.168.233
-      script: bash scripts/deploy.sh 
+      script: 
+        - npm run build
+        - bash scripts/deploy.sh 
 stages:
   - name: Unit Tests
-  - name: Build
+  - name: Build Test
+    if: branch = develop
   - name: Deploy
     if: branch = master AND type = push
