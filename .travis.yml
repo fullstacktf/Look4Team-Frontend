@@ -10,7 +10,7 @@ script:
 #   - npm test    
 env:
   global:
-    - REMOTE_PATH=/var/www/look4.team/
+    - REMOTE_PATH=Uploads
     - REMOTE_USER=deploy
     - REMOTE_HOST=167.172.168.233
 before_install:
