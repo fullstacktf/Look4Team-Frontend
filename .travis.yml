@@ -13,6 +13,7 @@ env:
     - REMOTE_PATH=/var/www/look4.team/
     - REMOTE_USER=deploy
     - REMOTE_HOST=167.172.168.233
+    - DEPLOY_DIR=build
 before_install:
   - bash scripts/install.sh
 after_success:

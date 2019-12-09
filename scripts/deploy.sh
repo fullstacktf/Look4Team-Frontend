@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scp -o StrictHostKeyChecking=no -i deploy-travis -r build ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}
+scp -o StrictHostKeyChecking=no -i deploy-travis -r ${DEPLOY_DIR} ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}
 
 # COMMAND="cd ${REMOTE_PATH} && git pull"
 
