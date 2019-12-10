@@ -13,15 +13,18 @@ nav {
   padding-left: 59px;
   display: flex;
 }
+a {
+  text-decoration: none;
+}
 
+a:hover {
+  border-bottom: 3px solid #42a29e;
+}
 .bell {
   margin-left: auto;
   padding-left: 65px;
-  /* background-color: #fff; */
-  /* padding-right: 33px; */
 }
 
 .profile {
-  /* background-color: #fff; */
-  margin-left: auto;
+  padding-left: 20px;
 }

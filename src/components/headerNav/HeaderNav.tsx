@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./HeaderNav.css";
 import Logo from "../logo/Logo";
-import HeaderOptions from "../HeaderOptions/HeaderOptions";
+import HeaderOptions from "../headerOptions/HeaderOptions";
 import Bell from "../bell/Bell";
 import Profile from "../profile/Profile";
 
@@ -15,9 +15,16 @@ class HeaderNav extends React.Component<{}, {}> {
       <header>
         <Logo />
         <nav>
-          <HeaderOptions text="inicio" />
-          <HeaderOptions text="events" />
-          <HeaderOptions text="groups" />
+          {/* <a href="/html/">HTML</a> */}
+          <a href="/">
+            <HeaderOptions text="inicio" />
+          </a>
+          <a href="/events">
+            <HeaderOptions text="events" />
+          </a>
+          <a href="/groups">
+            <HeaderOptions text="groups" />
+          </a>
         </nav>
         <div className="bell">
           <Bell />
