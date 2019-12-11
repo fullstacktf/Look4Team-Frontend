@@ -10,7 +10,7 @@ jobs:
     - stage: Deploy
       before_install: bash scripts/install.sh
       env:
-        - REMOTE_PATH=Uploads
+        - REMOTE_PATH=/var/www/look4.team
         - REMOTE_USER=deploy
         - REMOTE_HOST=167.172.168.233
       script: 
