@@ -4,19 +4,19 @@
   font-style: light;
 }
 
-.container {
+/* .container {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
+} */
 
-h1 {
+/* h1 {
   margin-left: 7px;
   margin-right: 23px;
   color: #eaeaea;
   font-family: "roboto";
   font-size: 18px;
-}
+} */
 
 svg {
   fill: #42a29e;

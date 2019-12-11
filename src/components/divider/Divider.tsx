@@ -1,22 +1,26 @@
 import * as React from "react";
 import Icon from "../icon/Icon";
-import "./DividerContainer.css";
+import "./Divider.css";
+import styled from "@emotion/styled";
 
 export interface DividerContainerProps {
   title: string;
 }
 
-const DividerContainer = ({ title }) => {
+const Divider: React.FC<DividerContainerProps> = props => {
   return (
-    <div>
+    <Div>
       <div>
-        <p>(title)</p>
+        <p>{props.title}</p>
         <Icon icon="search" />
         <Icon icon="add" />
       </div>
       <hr />
-    </div>
+    </Div>
   );
 };
 
-export default DividerContainer;
+const Div = styled.div`
+  display: flex;
+`;
+export default Divider;
