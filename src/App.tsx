@@ -9,8 +9,8 @@ import Header from "./components/header/Header";
 const App: React.FC = () => {
   return (
     <div className="App">
+      <Header />
       <Router>
-        <Header />
         <Route exact path="/" component={Home} />
         <Route path="/events" component={Events} />
         <Route path="/groups" component={Groups} />
