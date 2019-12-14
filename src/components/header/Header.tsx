@@ -12,10 +12,9 @@ const HEADER = styled.header`
   align-items: center;
   padding-left: 12%;
   padding-right: 12%;
-
-  &:nth-child(3) {
+  /* & a:nth-child(1) {
     background-color: red;
-  }
+  } */
 `;
 
 const NAV = styled.nav`
@@ -32,6 +31,7 @@ const Header: React.FC = () => {
   return (
     <HEADER>
       <Logo />
+
       <NAV className="nav">
         <a href="/">
           <HeaderOptions text="inicio" />
@@ -43,6 +43,7 @@ const Header: React.FC = () => {
           <HeaderOptions text="groups" />
         </a>
       </NAV>
+
       <div className="bell">
         <Bell />
       </div>

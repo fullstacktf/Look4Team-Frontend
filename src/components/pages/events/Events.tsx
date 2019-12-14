@@ -6,14 +6,25 @@ import Button from "../../button/Button";
 
 export interface EventsProps {}
 const DIV = styled.div`
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  margin-top: 2rem;
   width: 75%;
+
+  div:nth-child(1) {
+    text-align: center;
+  }
+
+  button {
+    margin-left: 2em;
+  }
 `;
 const Events: React.FC = () => {
   return (
     <DIV>
-      <Button text="CREA UN EVENTO" />
+      <div>
+        <Button link="add/events" text="CREA UN EVENTO" />
+        <Button link="search/events" text="BUSCA UN EVENTO" />
+      </div>
       <Divider caso="events" />
       <Card name="Evento partido" photo="" content="Polideportivo" />
     </DIV>
