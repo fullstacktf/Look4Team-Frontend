@@ -20,6 +20,7 @@ const GroupForm: React.FC = () => {
     console.log(image.value);
     console.log(description.value);
     console.log(user.value);
+    alert("Tu grupo ha sido creado!");
   };
   return (
     <div>

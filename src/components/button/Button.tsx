@@ -17,7 +17,7 @@ const BUTTON = styled.button`
   font-size: 1rem;
   padding: 0.5rem;
   outline: none;
-  color: #c5c6c7;
+  color: white;
   background-color: #1f2833;
   opacity: 0.9;
   border: 1px solid #66fcf1;

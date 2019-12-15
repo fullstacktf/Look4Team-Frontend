@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import Divider from "../../divider/Divider";
 import Card from "../../card/Card";
 import EventForm from "../../eventForm/EventForm";
+import SignIn from "../../signIn/SignIn";
 
 export interface HomeProps {}
 

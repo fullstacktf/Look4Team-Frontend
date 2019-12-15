@@ -26,6 +26,7 @@ const SignIn: React.FC = () => {
   const handleSubmit = e => {
     e.preventDefault();
     console.log(email.value);
+    console.log(password.value);
   };
   return (
     <DIV>

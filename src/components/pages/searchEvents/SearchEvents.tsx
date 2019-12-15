@@ -1,22 +1,18 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import SignIn from "../../signIn/SignIn";
+import PageWrapper from "../../pageWrapper/PageWrapper";
 
 const DIV = styled.div`
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  margin-top: 2rem;
   width: 75%;
 `;
 
 export interface SearchEventsProps {}
 
 const SearchEvents: React.FC = () => {
-  return (
-    <DIV>
-      PAGINA BUSCAR EVENTOS
-      <SignIn />
-    </DIV>
-  );
+  return <DIV></DIV>;
 };
 
 export default SearchEvents;

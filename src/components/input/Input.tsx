@@ -1,4 +1,5 @@
 import * as React from "react";
+import styled from "@emotion/styled";
 
 export interface InputProps {
   type: string;
@@ -16,7 +17,7 @@ const Input: React.FC<InputProps> = ({
   value
 }) => {
   return (
-    <div>
+    <DIV>
       <label>{label}</label>
       <input
         name={name}
@@ -27,8 +28,16 @@ const Input: React.FC<InputProps> = ({
           onChange(event);
         }}
       />
-    </div>
+    </DIV>
   );
 };
+
+const DIV = styled.div`
+  padding: 0.4rem;
+
+  label {
+    display: block;
+  }
+`;
 
 export default Input;

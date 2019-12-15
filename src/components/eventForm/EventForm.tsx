@@ -24,6 +24,7 @@ const EventForm: React.FC = () => {
     console.log(description.value);
     console.log(time.value);
     console.log(place.value);
+    alert("tu evento ha sido creado!");
   };
 
   return (
@@ -61,14 +62,6 @@ const FORM = styled.form`
   border: 1px solid #c5c6c7;
   border-radius: 2px;
   font-size: 1rem;
-
-  label {
-    display: block;
-  }
-
-  div {
-    padding: 0.4em;
-  }
 
   div:last-child {
     text-align: center;
