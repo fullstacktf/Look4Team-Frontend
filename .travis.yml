@@ -3,6 +3,8 @@ nodejs:
   - stable
 jobs:
   include:
+    - stage: Lint Tests      
+      script: npm run lint
     - stage: Unit Tests      
       script: npm test
     - stage: Build Test
@@ -17,6 +19,7 @@ jobs:
         - npm run build
       after_success: bash scripts/deploy.sh
 stages:
+  - name: Lint Tests
   - name: Unit Tests
   - name: Build Test
     if: branch = develop
