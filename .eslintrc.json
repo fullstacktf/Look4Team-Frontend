@@ -26,19 +26,18 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
-        "indent": [
-            "error",
-            2
-        ],
         "semi": [
             "error",
             "always"
         ],
         "camelcase": "off",
-        "@typescript-eslint/camelcase": ["error", { "properties": "always" }]
+        "@typescript-eslint/camelcase": ["error", { "properties": "always" }],
+        "prettier/prettier": "error",
+        "react/prop-types": 0
     },
     "settings": {
         "react": {
