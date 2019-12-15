@@ -22,8 +22,12 @@ const Events: React.FC = () => {
   return (
     <DIV>
       <div>
-        <Button link="add/events" text="CREA UN EVENTO" />
-        <Button link="search/events" text="BUSCA UN EVENTO" />
+        <a href="add/events">
+          <Button text="CREA UN EVENTO" />
+        </a>
+        <a href="search/events">
+          <Button text="BUSCA UN EVENTO" />
+        </a>
       </div>
       <Divider caso="events" />
       <Card name="Evento partido" photo="" content="Polideportivo" />

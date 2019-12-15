@@ -4,9 +4,10 @@ import styled from "@emotion/styled";
 import EventForm from "../../eventForm/EventForm";
 export interface AddEventsProps {}
 const DIV = styled.div`
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  margin-top: 2rem;
   width: 75%;
+  align-content: center;
 `;
 const AddEvents: React.FC = () => {
   return (

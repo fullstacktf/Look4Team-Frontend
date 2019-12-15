@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import styled from "@emotion/styled";
+import GroupForm from "../../groupForm/GroupForm";
 
 const DIV = styled.div`
   margin-left: auto;
@@ -10,7 +11,11 @@ const DIV = styled.div`
 export interface AddGroupsProps {}
 
 const AddGroups: React.FC = () => {
-  return <DIV>page add groups</DIV>;
+  return (
+    <DIV>
+      <GroupForm />
+    </DIV>
+  );
 };
 
 export default AddGroups;

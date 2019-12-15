@@ -12,7 +12,7 @@ const HEADER = styled.header`
   align-items: center;
   padding-left: 12%;
   padding-right: 12%;
-  /* & a:nth-child(1) {
+  /* a:nth-child(1) {
     background-color: red;
   } */
 `;

@@ -1,41 +1,35 @@
 import * as React from "react";
+
 import styled from "@emotion/styled";
-import { useState } from "react";
-import Input from "../input/Input";
 import Button from "../button/Button";
+import Input from "../input/Input";
 import { useFormInput } from "../../hooks/useFormInput";
+export interface GroupFormProps {}
 
-export interface EventFormProps {}
-
-const EventForm: React.FC = () => {
+const GroupForm: React.FC = () => {
   const name = useFormInput("");
-  const sport = useFormInput("");
+  const image = useFormInput("");
   const description = useFormInput("");
-  const place = useFormInput("");
-  const time = useFormInput("");
+  const user = useFormInput("");
 
   // const [value, setValue] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
-    // const { name, sport } = e.target.value;
     console.log(name.value);
-    console.log(sport.value);
+    console.log(image.value);
     console.log(description.value);
-    console.log(time.value);
-    console.log(place.value);
+    console.log(user.value);
   };
-
   return (
     <div>
       <FORM onSubmit={handleSubmit}>
-        <Input label="nombre" name="name" type="text" {...name} />
+        <Input label="Nombre" name="name" type="text" {...name} />
 
-        <Input label="deporte" name="sport" type="text" {...sport} />
+        <Input label="Imagen" name="image" type="file" {...image} />
 
-        <Input label="lugar" name="place" type="text" {...place} />
+        <Input label="Usuarios" name="user" type="text" {...user} />
 
-        <Input label="hora" name="time" type="text" value="time" {...time} />
         <Input
           label="descripción"
           name="description"
@@ -44,15 +38,13 @@ const EventForm: React.FC = () => {
           // value="description"
         />
         <div>
-          <Button text="CREAR EVENTO" />
+          <Button text="CREAR GRUPO" />
         </div>
         {/* <input type="submit" /> */}
       </FORM>
     </div>
   );
 };
-
-export default EventForm;
 
 const FORM = styled.form`
   background-color: #f0f0f0;
@@ -79,3 +71,5 @@ const FORM = styled.form`
     background-color: red;
   }
 `;
+
+export default GroupForm;

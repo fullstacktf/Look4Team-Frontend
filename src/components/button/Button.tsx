@@ -3,15 +3,10 @@ import * as React from "react";
 import styled from "@emotion/styled";
 export interface ButtonProps {
   text: string;
-  link: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, link }) => {
-  return (
-    <a href={link}>
-      <BUTTON>{text}</BUTTON>
-    </a>
-  );
+const Button: React.FC<ButtonProps> = ({ text }) => {
+  return <BUTTON type="submit">{text}</BUTTON>;
 };
 
 export default Button;
@@ -27,4 +22,5 @@ const BUTTON = styled.button`
   opacity: 0.9;
   border: 1px solid #66fcf1;
   border-radius: 3px;
+  cursor: pointer;
 `;

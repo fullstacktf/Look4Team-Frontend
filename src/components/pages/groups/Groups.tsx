@@ -23,8 +23,12 @@ const Groups = () => {
   return (
     <DIV>
       <div>
-        <Button link="add/groups" text="CREA UN GRUPO" />
-        <Button link="search/groups" text="BUSCA UN GRUPO" />
+        <a href="add/groups">
+          <Button text="CREA UN GRUPO" />
+        </a>
+        <a href="search/groups">
+          <Button text="BUSCA UN GRUPO" />
+        </a>
       </div>
 
       <Divider caso="groups" />

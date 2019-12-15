@@ -7,9 +7,10 @@ import EventForm from "../../eventForm/EventForm";
 export interface HomeProps {}
 
 const DIV = styled.div`
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  margin-top: 2rem;
   width: 75%;
+
   /* display: grid;
   grid-template: 1fr, 1fr, 1fr / 1fr, 1fr, 1fr, 1fr;
   column-gap: 20px;
