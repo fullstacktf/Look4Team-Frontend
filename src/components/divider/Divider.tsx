@@ -1,6 +1,10 @@
 import * as React from "react";
 import Icon from "../icon/Icon";
 import styled from "@emotion/styled";
+import { useEffect, useState } from "react";
+import { EventCards } from "../../services/events/services";
+import { EventCard } from "../../services/events/models";
+import Card from "../card/Card";
 
 const DIV = styled.div`
   display: flex;
@@ -22,12 +26,22 @@ const DIV = styled.div`
 
 export interface DividerContainerProps {
   caso: string;
+  initialEvents?: EventCard[];
+  url: string;
 }
 //events, groups, friends
 
-const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
+const Divider: React.FC<DividerContainerProps> = ({ caso, initialEvents = [], url }) => {
+  const [events, setEvents] = useState<EventCard[]>(initialEvents);
+  const [eventList, setEventList] = useState(); 
+
+useEffect(()=> {
+  EventCards.getAll().then(events => setEventList(events)).catch(err => console.log("ha sucedido un error", err));
+
+}, [url]);
+
   switch (caso) {
-    case "events":
+    case "events":  
       return (
         <div>
           <DIV>
@@ -42,6 +56,9 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
             </div>
           </DIV>
           <hr />
+      
+          {eventList && eventList.map(event => (<Card key={event.id} contain={event}/>))}
+          
         </div>
       );
     case "groups":

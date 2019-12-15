@@ -29,8 +29,8 @@ const Events: React.FC = () => {
           <Button text="BUSCA UN EVENTO" />
         </a>
       </div>
-      <Divider caso="events" />
-      <Card name="Evento partido" photo="" content="Polideportivo" />
+      <Divider caso="events" url="https://look4.team/api/events" />
+      {/* <Card name="Evento partido" photo="" content="Polideportivo" /> */}
     </DIV>
   );
 };

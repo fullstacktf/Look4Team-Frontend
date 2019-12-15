@@ -29,10 +29,10 @@ const DIV = styled.div`
 const Home: React.FC = () => {
   return (
     <DIV>
-      <Divider caso="events" />
+      {/* <Divider caso="events" />
       <Card name="Partidito rapido" photo="" content="lugar: polideportivo " />
       <Divider caso="groups" />
-      <Card name="Grupo look4" photo="" content="<<imagenes amigos>>" />
+      <Card name="Grupo look4" photo="" content="<<imagenes amigos>>" /> */}
     </DIV>
   );
 };

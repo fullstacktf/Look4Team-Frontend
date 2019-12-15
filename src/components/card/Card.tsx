@@ -1,10 +1,9 @@
 import * as React from "react";
 import styled from "@emotion/styled";
+import { EventCard } from "../../services/events/models";
 
 export interface CardProps {
-  name: string;
-  photo: string;
-  content: string; //contenido eventos (hora, fecha, lugar) o grupos (avatars)
+contain: any; //EventCard
 }
 
 const DIV = styled.div`
@@ -32,14 +31,14 @@ const DIV = styled.div`
   }
 `;
 
-const Card: React.FC<CardProps> = ({ name, photo, content }) => {
+const Card: React.FC<CardProps> = ({ contain }) => {
   return (
     <DIV>
-      <p>{name}</p>
+      <p>{contain.name}</p>
       <hr />
       <div>
-        <img src={photo} alt="img" />
-        <p>{content}</p>
+        <img src={contain.image} alt="img" />
+        <p>{contain.place}</p>
       </div>
     </DIV>
   );

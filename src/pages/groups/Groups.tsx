@@ -31,8 +31,8 @@ const Groups = () => {
         </a>
       </div>
 
-      <Divider caso="groups" />
-      <Card name="Grupito guay" photo="" content="<<amigos>>" />
+      {/* <Divider caso="groups" /> */}
+      {/* <Card name="Grupito guay" photo="" content="<<amigos>>" /> */}
     </DIV>
   );
 };
