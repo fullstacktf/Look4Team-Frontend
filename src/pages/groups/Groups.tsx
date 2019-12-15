@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import Divider from "../../divider/Divider";
-import Card from "../../card/Card";
-import Button from "../../button/Button";
+import Divider from "../../components/divider/Divider";
+import Card from "../../components/card/Card";
+import Button from "../../components/button/Button";
 
 export interface GroupsProps {}
 const DIV = styled.div`

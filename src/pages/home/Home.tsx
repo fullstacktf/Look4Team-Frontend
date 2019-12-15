@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import Divider from "../../divider/Divider";
-import Card from "../../card/Card";
-import EventForm from "../../eventForm/EventForm";
-import SignIn from "../../signIn/SignIn";
+import Divider from "../../components/divider/Divider";
+import Card from "../../components/card/Card";
+import EventForm from "../../components/eventForm/EventForm";
+import SignIn from "../../components/signIn/SignIn";
 
 export interface HomeProps {}
 

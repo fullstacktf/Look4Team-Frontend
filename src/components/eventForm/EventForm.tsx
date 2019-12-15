@@ -24,6 +24,7 @@ const EventForm: React.FC = () => {
     console.log(description.value);
     console.log(time.value);
     console.log(place.value);
+
     alert("tu evento ha sido creado!");
   };
 

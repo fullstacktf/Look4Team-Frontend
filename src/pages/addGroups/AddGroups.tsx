@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import styled from "@emotion/styled";
-import GroupForm from "../../groupForm/GroupForm";
+import GroupForm from "../../components/groupForm/GroupForm";
 
 const DIV = styled.div`
   margin-left: auto;

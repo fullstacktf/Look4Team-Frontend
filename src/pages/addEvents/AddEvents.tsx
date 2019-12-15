@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import styled from "@emotion/styled";
-import EventForm from "../../eventForm/EventForm";
+import EventForm from "../../components/eventForm/EventForm";
 export interface AddEventsProps {}
 const DIV = styled.div`
   margin: auto;
