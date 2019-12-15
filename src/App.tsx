@@ -1,20 +1,14 @@
 import * as React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./components/home/Home";
-import Events from "./components/events/Events";
-import Groups from "./components/groups/Groups";
-import HeaderNav from "./components/headerNav/HeaderNav";
+import "./components/routes/Routes";
+import Header from "./components/header/Header";
+import Routes from "./components/routes/Routes";
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Router>
-        <HeaderNav />
-        <Route exact path="/" component={Home} />
-        <Route path="/events" component={Events} />
-        <Route path="/groups" component={Groups} />
-      </Router>
+      <Header />
+      <Routes />
     </div>
   );
 };
