@@ -4,33 +4,22 @@ import styled from "@emotion/styled";
 export interface InputProps {
   type: string;
   name: string;
-  onChange: any;
   value: string;
   label: string;
-  required?: boolean;
+  onChange: any;
 }
 
 const Input: React.FC<InputProps> = ({
   label,
   type,
   name,
-  onChange,
   value,
-  required
+  onChange
 }) => {
   return (
     <DIV>
       <label>{label}</label>
-      <input
-        name={name}
-        type={type}
-        value={value}
-        onChange={event => {
-          event.preventDefault();
-          onChange(event);
-        }}
-        required={required}
-      />
+      <input name={name} type={type} value={value} onChange={onChange} />
     </DIV>
   );
 };
