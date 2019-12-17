@@ -7,6 +7,7 @@ export interface InputProps {
   onChange: any;
   value: string;
   label: string;
+  required?: boolean;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -14,7 +15,8 @@ const Input: React.FC<InputProps> = ({
   type,
   name,
   onChange,
-  value
+  value,
+  required
 }) => {
   return (
     <DIV>
@@ -27,6 +29,7 @@ const Input: React.FC<InputProps> = ({
           event.preventDefault();
           onChange(event);
         }}
+        required={required}
       />
     </DIV>
   );

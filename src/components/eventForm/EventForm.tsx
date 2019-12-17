@@ -4,8 +4,12 @@ import { useState } from "react";
 import Input from "../input/Input";
 import Button from "../button/Button";
 import { useFormInput } from "../../hooks/useFormInput";
+import { EventCard } from "../../services/events/models";
+import Request from "superagent";
 
-export interface EventFormProps {}
+// export interface EventFormProps {
+//   EventCard[];
+// }
 
 const EventForm: React.FC = () => {
   const name = useFormInput("");
@@ -13,37 +17,66 @@ const EventForm: React.FC = () => {
   const description = useFormInput("");
   const place = useFormInput("");
   const time = useFormInput("");
-
-  // const [value, setValue] = useState("");
+  const [value, setValue] = useState({
+    name: "",
+    sport: "",
+    description: "",
+    datetime: "",
+    place: ""
+  });
 
   const handleSubmit = e => {
     e.preventDefault();
-    // const { name, sport } = e.target.value;
-    console.log(name.value);
-    console.log(sport.value);
-    console.log(description.value);
-    console.log(time.value);
-    console.log(place.value);
+    setValue({
+      name: name.value,
+      sport: sport.value,
+      description: description.value,
+      datetime: time.value,
+      place: place.value
+    });
 
-    alert("tu evento ha sido creado!");
+    //@ts-ignore
+    Request.post("https://look4.team/api/events")
+      .send(value)
+      .set("Content-Type", "application/json")
+      .then(console.log(value))
+      .catch(err => console.log("ha sucedido un error", err));
+    // alert("tu evento ha sido creado!");
   };
-
+  const handleValue = () => {};
   return (
     <div>
       <FORM onSubmit={handleSubmit}>
-        <Input label="nombre" name="name" type="text" {...name} />
+        <Input
+          label="nombre"
+          name="name"
+          type="text"
+          {...name}
+          required={true}
+        />
 
         <Input label="deporte" name="sport" type="text" {...sport} />
 
-        <Input label="lugar" name="place" type="text" {...place} />
+        <Input
+          label="lugar"
+          name="place"
+          type="text"
+          {...place}
+          required={true}
+        />
 
-        <Input label="hora" name="time" type="text" value="time" {...time} />
+        <Input
+          label="hora"
+          name="time"
+          type="datetime-local"
+          {...time}
+          required={true}
+        />
         <Input
           label="descripción"
           name="description"
           type="text"
           {...description}
-          // value="description"
         />
         <div>
           <Button text="CREAR EVENTO" />

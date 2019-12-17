@@ -2,7 +2,7 @@ import * as React from "react";
 import Icon from "../icon/Icon";
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
-import { EventCards } from "../../services/events/services";
+import Request from "superagent";
 import { EventCard } from "../../services/events/models";
 import Card from "../card/Card";
 
@@ -31,17 +31,20 @@ export interface DividerContainerProps {
 }
 //events, groups, friends
 
-const Divider: React.FC<DividerContainerProps> = ({ caso, initialEvents = [], url }) => {
+const Divider: React.FC<DividerContainerProps> = ({
+  caso,
+  initialEvents = []
+}) => {
   const [events, setEvents] = useState<EventCard[]>(initialEvents);
-  const [eventList, setEventList] = useState(); 
+  const [eventList, setEventList] = useState<EventCard[]>(initialEvents);
 
-useEffect(()=> {
-  EventCards.getAll().then(events => setEventList(events)).catch(err => console.log("ha sucedido un error", err));
-
-}, [url]);
-
+  useEffect(() => {
+    Request.get("https://look4.team/api/events")
+      .then(events => setEventList(events.body))
+      .catch(err => console.log("ha sucedido un error", err));
+  });
   switch (caso) {
-    case "events":  
+    case "events":
       return (
         <div>
           <DIV>
@@ -56,9 +59,9 @@ useEffect(()=> {
             </div>
           </DIV>
           <hr />
-      
-          {eventList && eventList.map(event => (<Card key={event.id} contain={event}/>))}
-          
+
+          {eventList &&
+            eventList.map(event => <Card key={event._id} contain={event} />)}
         </div>
       );
     case "groups":

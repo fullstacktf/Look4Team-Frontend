@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "@emotion/styled";
+import EventForm from "../../components/eventForm/EventForm";
 
 const DIV = styled.div`
   margin: auto;
@@ -10,7 +11,11 @@ const DIV = styled.div`
 export interface SearchEventsProps {}
 
 const SearchEvents: React.FC = () => {
-  return <DIV></DIV>;
+  return (
+    <DIV>
+      <EventForm />
+    </DIV>
+  );
 };
 
 export default SearchEvents;

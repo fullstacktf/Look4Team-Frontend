@@ -30,7 +30,9 @@ const NAV = styled.nav`
 const Header: React.FC = () => {
   return (
     <HEADER>
-      <Logo />
+      <a href="/">
+        <Logo />
+      </a>
 
       <NAV className="nav">
         <a href="/">
