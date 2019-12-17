@@ -6,11 +6,35 @@ import Bell from "../bell/Bell";
 import Profile from "../profile/Profile";
 import styled from "@emotion/styled";
 
+const HEADER = styled.header`
+  background-color: #1f2833;
+  display: flex;
+  align-items: center;
+  padding-left: 12%;
+  padding-right: 12%;
+  /* a:nth-child(1) {
+    background-color: red;
+  } */
+`;
+
+const NAV = styled.nav`
+  margin-left: 5%;
+  display: flex;
+
+  a {
+    margin-right: 1.5rem;
+    text-decoration: none;
+  }
+`;
+
 const Header: React.FC = () => {
   return (
-    <HeaderCSS>
-      <Logo />
-      <Nav>
+    <HEADER>
+      <a href="/">
+        <Logo />
+      </a>
+
+      <NAV className="nav">
         <a href="/">
           <HeaderOptions text="inicio" />
         </a>
@@ -20,27 +44,16 @@ const Header: React.FC = () => {
         <a href="/groups">
           <HeaderOptions text="groups" />
         </a>
-      </Nav>
+      </NAV>
+
       <div className="bell">
         <Bell />
       </div>
       <div className="profile">
         <Profile />
       </div>
-    </HeaderCSS>
+    </HEADER>
   );
 };
 
-const HeaderCSS = styled.header`
-  background-color: #1f2833;
-  display: flex;
-  align-items: center;
-  padding-left: 161px;
-  padding-right: 161px;
-`;
-const Nav = styled.nav`
-  padding-right: 425px;
-  padding-left: 59px;
-  display: flex;
-`;
 export default Header;
