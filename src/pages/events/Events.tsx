@@ -22,10 +22,10 @@ const Events: React.FC = () => {
   return (
     <DIV>
       <div>
-        <a href="add/events">
+        <a href="events/add">
           <Button text="CREA UN EVENTO" />
         </a>
-        <a href="search/events">
+        <a href="events/search">
           <Button text="BUSCA UN EVENTO" />
         </a>
       </div>
