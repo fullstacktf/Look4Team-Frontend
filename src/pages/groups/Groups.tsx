@@ -5,7 +5,7 @@ import Card from "../../components/card/Card";
 import Button from "../../components/button/Button";
 import ButtonTest from "../../components/buttontest/ButtonTest";
 
-export interface GroupsProps {}
+export interface GroupsProps { }
 const DIV = styled.div`
   margin: auto;
   margin-top: 2rem;
@@ -31,9 +31,8 @@ const Groups = () => {
           <Button text="BUSCA UN GRUPO" />
         </a>
       </div>
+      <Divider caso="groups" url="" />
 
-      {/* <Divider caso="groups" /> */}
-      {/* <Card name="Grupito guay" photo="" content="<<amigos>>" /> */}
     </DIV>
   );
 };
