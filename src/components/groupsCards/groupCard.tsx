@@ -16,7 +16,9 @@ export const GroupCard: FC<GroupCardProps> = ({ group }) => {
       </Title>
       <BodyCard>
         <img src={group.image} alt="imgagen" width="50px" height="50px" />
-        {friendList && friendList.map(friend => <FriendsAvatars friends={friend} />)}
+        <AvatarsContainer>
+          {friendList && friendList.map(friend => <FriendsAvatars friends={friend} />)}
+        </AvatarsContainer>
       </BodyCard>
     </Container>
   );
@@ -43,4 +45,12 @@ const BodyCard = styled.div`
 display:flex;
 flex-direction: row;
 padding: 10px;
+`
+const AvatarsContainer = styled.div`
+margin-left: 8px;
+width: 90%;
+display:flex;
+flex-direction:row;
+flex-wrap: wrap;
+overflow:hidden;
 `
