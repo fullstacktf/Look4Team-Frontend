@@ -5,11 +5,7 @@ export interface valuesType {
   name: string;
   sport: string;
   place: string;
-<<<<<<< HEAD
   datetime: string;
-=======
-  time: string;
->>>>>>> 2bde0c24bef634d4c0ea866793f8137a99db6d60
   description: string;
 }
 
@@ -18,11 +14,7 @@ export const useFormInput = callback => {
     name: "",
     sport: "",
     place: "",
-<<<<<<< HEAD
     datetime: "",
-=======
-    time: "",
->>>>>>> 2bde0c24bef634d4c0ea866793f8137a99db6d60
     description: ""
   };
   const [inputs, setInputs] = useState(initialValues);
