@@ -28,12 +28,12 @@ const BUTTON = styled.button`
   text-transform: uppercase;
   text-decoration: none;
   background: #ffffff;
-  padding: 20px;
+  padding: 1em 2.5em 1em 2.5em;
   border: 4px solid #494949 !important;
   display: inline-block;
   transition: all 0.4s ease 0s;
   /* font-family: "roboto"; */
-  font-size: 1rem;
+  font-size: 1em;
   /* font-weight: bold; */
   cursor: pointer;
 

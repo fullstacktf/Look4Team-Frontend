@@ -3,13 +3,14 @@ import styled from "@emotion/styled";
 import { EventCard } from "../../services/events/models";
 
 export interface CardProps {
-contain: any; //EventCard
+  contain: any; //EventCard
 }
 
 const DIV = styled.div`
   border: 1px solid black;
   border-radius: 2px;
   width: 15rem;
+  margin: 0.5em;
 
   p {
     margin: 0.3em;

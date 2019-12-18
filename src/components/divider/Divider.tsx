@@ -1,15 +1,23 @@
 import * as React from "react";
 import Icon from "../icon/Icon";
 import styled from "@emotion/styled";
-import { useEffect, useState } from "react";
-import Request from "superagent";
-import { EventCard } from "../../services/events/models";
-import Card from "../card/Card";
+import Cards from "../cards/Cards";
+// import { useEffect, useState } from "react";
+// import Request from "superagent";
+// import { EventCard } from "../../services/events/models";
+// import Card from "../card/Card";
 
 const DIV = styled.div`
-  display: flex;
+  div:nth-child(1) {
+    display: flex;
+    p {
+      font-weight: bold;
+      margin: 0;
+      margin-top: 40px;
+    }
+  }
 
-  div {
+  div:nth-child(2) {
     margin-left: auto;
     padding-top: 40px;
   }
@@ -17,57 +25,41 @@ const DIV = styled.div`
   svg {
     padding-left: 10px;
   }
-  p {
-    margin: 0;
-    margin-top: 40px;
-    font-family: "roboto";
-  }
 `;
 
 export interface DividerContainerProps {
   caso: string;
-  initialEvents?: EventCard[];
   url: string;
 }
 //events, groups, friends
 
-const Divider: React.FC<DividerContainerProps> = ({
-  caso,
-  initialEvents = []
-}) => {
-  const [events, setEvents] = useState<EventCard[]>(initialEvents);
-  const [eventList, setEventList] = useState<EventCard[]>(initialEvents);
-
-  useEffect(() => {
-    Request.get("https://look4.team/api/events")
-      .then(events => setEventList(events.body))
-      .catch(err => console.log("ha sucedido un error", err));
-  });
+const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
   switch (caso) {
     case "events":
       return (
         <div>
           <DIV>
-            <p> Tus eventos </p>
             <div>
-              <a href="/search/events">
-                <Icon icon="search" />
-              </a>
-              <a href="/add/events">
-                <Icon icon="add" />
-              </a>
+              <p> Tus eventos </p>
+              <div>
+                <a href="/search/events">
+                  <Icon icon="search" />
+                </a>
+                <a href="/add/events">
+                  <Icon icon="add" />
+                </a>
+              </div>
             </div>
+            <hr />
           </DIV>
-          <hr />
 
-          {eventList &&
-            eventList.map(event => <Card key={event._id} contain={event} />)}
+          <Cards />
         </div>
       );
     case "groups":
       return (
-        <div>
-          <DIV>
+        <DIV>
+          <div>
             <p> Tus grupos </p>
             <div>
               <a href="/search/groups">
@@ -77,15 +69,15 @@ const Divider: React.FC<DividerContainerProps> = ({
                 <Icon icon="add" />
               </a>
             </div>
-          </DIV>
+          </div>
           <hr />
-        </div>
+        </DIV>
       );
 
     case "friends":
       return (
-        <div>
-          <DIV>
+        <DIV>
+          <div>
             <p> Amigos </p>
             <div>
               <a href="/search/users">
@@ -95,9 +87,9 @@ const Divider: React.FC<DividerContainerProps> = ({
                 <Icon icon="add" />
               </a>
             </div>
-          </DIV>
+          </div>
           <hr />
-        </div>
+        </DIV>
       );
     default:
       return <p>nada</p>;
