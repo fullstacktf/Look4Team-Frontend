@@ -12,7 +12,7 @@ const Button: React.FC<ButtonProps> = ({ text }) => {
 export default Button;
 
 const BUTTON = styled.button`
-  display: inline-block;
+  /* display: inline-block;
   font-family: "roboto";
   font-size: 1rem;
   padding: 0.5rem;
@@ -22,5 +22,25 @@ const BUTTON = styled.button`
   opacity: 0.9;
   border: 1px solid #66fcf1;
   border-radius: 3px;
+  cursor: pointer; */
+
+  color: #494949 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 20px;
+  border: 4px solid #494949 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  /* font-family: "roboto"; */
+  font-size: 1rem;
+  /* font-weight: bold; */
   cursor: pointer;
+
+  :hover {
+    color: #ffffff !important;
+    background: #42a29e;
+    border-color: #42a29e !important;
+    transition: all 0.4s ease 0s !important;
+  }
 `;
