@@ -1,9 +1,5 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-<<<<<<< HEAD
-=======
-import PageWrapper from "../pageWrapper/PageWrapper";
->>>>>>> 2bde0c24bef634d4c0ea866793f8137a99db6d60
 import Divider from "../divider/Divider";
 import CancelButton from "../cancelButton/CancelButton";
 import SearchInput from "../searchInput/SearchInput";
@@ -11,19 +7,7 @@ import SearchInput from "../searchInput/SearchInput";
 export interface HomeProps {}
 
 const Home = () => {
-  return (
-    <HomeWrapper>
-<<<<<<< HEAD
-      <SearchInput text="Palabras Clave" />
-      <CancelButton />
-=======
-      <SearchInput text="Palabras Clave"/>
-      <CancelButton/> 
->>>>>>> 2bde0c24bef634d4c0ea866793f8137a99db6d60
-      test
-      {/* <Divider title="titulo" /> */}
-    </HomeWrapper>
-  );
+  return <div></div>;
 };
 
 const HomeWrapper = styled.div`

@@ -5,15 +5,11 @@ import Input from "../input/Input";
 import Button from "../button/Button";
 import { EventCard } from "../../services/events/models";
 import { useFormInput } from "../../hooks/useFormInput";
-<<<<<<< HEAD
 import Request from "superagent";
-=======
->>>>>>> 2bde0c24bef634d4c0ea866793f8137a99db6d60
 
 export interface EventFormProps {}
 
 const EventForm: React.FC = () => {
-<<<<<<< HEAD
   // const { token } = useAuth()
   const sendform = () => {
     Request.post("https://look4.team/api/events")
@@ -21,16 +17,6 @@ const EventForm: React.FC = () => {
       // .set ( {headers: {authorization: `Bearer ${token}`}})c
       .then(console.log(inputs))
       .catch(err => console.log("ha sucedido un error", err));
-=======
-  const sendform = () => {
-    console.log(inputs.name);
-    alert("creado");
-    // Request.post("https://look4.team/api/events")
-    // .send(value)
-    // .set("Content-Type", "application/json")
-    // .then(console.log(value))
-    // .catch(err => console.log("ha sucedido un error", err));
->>>>>>> 2bde0c24bef634d4c0ea866793f8137a99db6d60
     // alert("tu evento ha sido creado!");
   };
 
@@ -66,17 +52,10 @@ const EventForm: React.FC = () => {
 
         <Input
           label="hora"
-<<<<<<< HEAD
           name="datetime"
           type="datetime-local"
           onChange={handleInputChange}
           value={inputs.datetime}
-=======
-          name="time"
-          type="text"
-          onChange={handleInputChange}
-          value={inputs.time}
->>>>>>> 2bde0c24bef634d4c0ea866793f8137a99db6d60
         />
         <Input
           label="descripción"
