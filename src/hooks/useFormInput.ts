@@ -7,6 +7,7 @@ export interface valuesType {
   place: string;
   datetime: string;
   description: string;
+  image: string;
 }
 
 export const useFormInput = callback => {
@@ -15,7 +16,8 @@ export const useFormInput = callback => {
     sport: "",
     place: "",
     datetime: "",
-    description: ""
+    description: "",
+    image: ""
   };
   const [inputs, setInputs] = useState(initialValues);
   const handleSubmit = event => {

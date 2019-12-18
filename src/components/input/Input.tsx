@@ -2,38 +2,38 @@ import * as React from "react";
 import styled from "@emotion/styled";
 
 export interface InputProps {
-  type: string;
-  name: string;
-  value: string;
-  label: string;
-  onChange: any;
+  type?: string;
+  name?: string;
+  value?: string;
+  onChange?: any;
+  placeholder?: string;
 }
 
 const Input: React.FC<InputProps> = ({
-  label,
   type,
   name,
   value,
-  onChange
+  onChange,
+  placeholder
 }) => {
   return (
     <DIV>
-      <label>{label}</label>
-      <input name={name} type={type} value={value} onChange={onChange} />
+      <input
+        name={name}
+        type={type}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+      />
     </DIV>
   );
 };
 
 const DIV = styled.div`
-  /* label {
-  display: block;
-} */
-  /* label {
-    color: #c5ecfd;
-  }
+  padding: 0.4em;
   input {
     outline: none;
-    padding: 0.4rem;
+
     width: 100%;
     margin: 10px 0;
     background: transparent;
@@ -41,11 +41,15 @@ const DIV = styled.div`
     padding: 10px;
     outline: none;
     box-sizing: border-box;
-    color: #c5ecfd;
+    color: #1f2833;
 
     outline: none;
-    border-bottom: 2px solid #c5ecfd;
-  } */
+    border-bottom: 2px solid #1f2833;
+
+    ::placeholder {
+      color: #1f2833;
+    }
+  }
 `;
 
 export default Input;

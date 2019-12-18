@@ -23,19 +23,18 @@ const EventForm: React.FC = () => {
   const { inputs, handleInputChange, handleSubmit } = useFormInput(sendform);
 
   return (
-    <div>
-      test
+    <DIV>
       <FORM onSubmit={handleSubmit}>
         <Input
-          label="nombre"
           name="name"
           type="text"
           onChange={handleInputChange}
           value={inputs.name}
+          placeholder="Nombre"
         />
 
         <Input
-          label="deporte"
+          placeholder="Sport"
           name="sport"
           type="text"
           onChange={handleInputChange}
@@ -43,7 +42,7 @@ const EventForm: React.FC = () => {
         />
 
         <Input
-          label="lugar"
+          placeholder="Place"
           name="place"
           type="text"
           onChange={handleInputChange}
@@ -51,34 +50,43 @@ const EventForm: React.FC = () => {
         />
 
         <Input
-          label="hora"
+          placeholder="Hora"
           name="datetime"
           type="datetime-local"
           onChange={handleInputChange}
           value={inputs.datetime}
         />
         <Input
-          label="descripción"
+          placeholder="Descripción"
           name="description"
           type="text"
           onChange={handleInputChange}
           value={inputs.description}
         />
+
+        <Input
+          placeholder=""
+          name="description"
+          type="file"
+          onChange={handleInputChange}
+          value={inputs.image}
+        />
         <div>
           <Button text="CREAR EVENTO" />
         </div>
       </FORM>
-    </div>
+    </DIV>
   );
 };
-
 export default EventForm;
 
+const DIV = styled.div`
+  margin: auto;
+  width: 40%;
+  /* background-color: red; */
+`;
 const FORM = styled.form`
-  background-color: #f0f0f0;
-  display: inline-block;
-  padding: 1.5rem;
-  border: 1px solid #c5c6c7;
+  padding: 1.5em;
   border-radius: 2px;
   font-size: 1rem;
 
@@ -87,7 +95,11 @@ const FORM = styled.form`
     padding-top: 1em;
   }
 
-  input:nth-child() {
-    background-color: red;
+  :before {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
   }
 `;

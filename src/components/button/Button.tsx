@@ -23,11 +23,11 @@ const BUTTON = styled.button`
   border: 1px solid #66fcf1;
   border-radius: 3px;
   cursor: pointer; */
-
+  margin: 1.5em;
   color: #494949 !important;
   text-transform: uppercase;
   text-decoration: none;
-  background: #ffffff;
+  background: transparent;
   padding: 1em 2.5em 1em 2.5em;
   border: 4px solid #494949 !important;
   display: inline-block;

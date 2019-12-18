@@ -10,13 +10,4 @@ const Home = () => {
   return <div></div>;
 };
 
-const HomeWrapper = styled.div`
-  margin-left: 161px;
-  margin-right: 161px;
-  display: grid;
-  /* rows / columns */
-  grid-template: 1fr, 1fr, 1fr / 1fr, 1fr, 1fr, 1fr;
-  column-gap: 20px;
-  row-gap: 20px;
-`;
 export default Home;
