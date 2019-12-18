@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "@emotion/styled";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 // import Logo from "../logo/Logo";
 // import { directive } from "@babel/types";
@@ -14,9 +15,6 @@ const DIV = styled.div`
   flex-direction: row;
   align-items: center;
 
-  &:hover {
-    border-bottom: 3px solid #66fcf1;
-  }
   &:hover > svg {
     fill: #66fcf1;
   }
