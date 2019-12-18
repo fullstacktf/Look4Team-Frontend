@@ -3,32 +3,8 @@ import Icon from "../icon/Icon";
 import styled from "@emotion/styled";
 import Cards from "../cards/Cards";
 import { GroupCards } from "../groupsCards/groupCards";
-// import { useEffect, useState } from "react";
-// import Request from "superagent";
-// import { EventCard } from "../../services/events/models";
-// import Card from "../card/Card";
-
-/*
-const DIV = styled.div`
-  div:nth-child(1) {
-    display: flex;
-    p {
-      font-weight: bold;
-      margin: 0;
-      margin-top: 40px;
-    }
-  }
-
-  div:nth-child(2) {
-    margin-left: auto;
-    padding-top: 40px;
-  }
-
-  svg {
-    padding-left: 10px;
-  }
-`;
-*/
+import { FriendsAvatars } from "../friendsAvatar/friendsAvatars";
+import { friendList } from "../friendsAvatar/friendsList";
 
 export interface DividerContainerProps {
   caso: string;
@@ -77,7 +53,7 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
 
     case "friends":
       return (
-        <Container>
+        <FriendsContainer>
           <TitleDivider>
             <p> Amigos </p>
             <div>
@@ -89,7 +65,10 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
               </a>
             </div>
           </TitleDivider>
-        </Container>
+          <AvatarContainer>
+            {friendList && friendList.map(friend => <FriendsAvatars friends={friend} />)}
+          </AvatarContainer>
+        </FriendsContainer>
       );
     default:
       return <p>nada</p>;
@@ -126,4 +105,14 @@ const TitleDivider = styled.div`
   & a {
     margin-right: 10px;
   }
+`
+
+const FriendsContainer = styled.div`
+width: 40%;
+`
+
+const AvatarContainer = styled.div`
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
 `

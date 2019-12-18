@@ -15,7 +15,10 @@ const Container = styled.div`
 const Home: React.FC = () => {
   return (
     <Container>
-      <CalendarMini />
+      <TopContainer>
+        <CalendarMini />
+        <Divider caso="friends" url="" />
+      </TopContainer>
       <Divider caso="events" url="https://look4.team/api/events" />
       <Divider caso="groups" url="" />
     </Container>
@@ -25,3 +28,9 @@ const Home: React.FC = () => {
 // {userList.ma<p(user <<=> <UserCard key={user.id} user={user} />)}
 
 export default Home;
+
+const TopContainer = styled.div`
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+`

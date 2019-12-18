@@ -15,8 +15,8 @@ export const FriendsAvatars: FC<FriendsAvatarsProps> = ({ friends }) => {
 };
 
 const Container = styled.div`
-width: 25px;
-height: 25px;
+width: 25%;
+height: auto;
 border-radius: 50%;
 margin-left: 3px;
 margin-bottom: 5px;
