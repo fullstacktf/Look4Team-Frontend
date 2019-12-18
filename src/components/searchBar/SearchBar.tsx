@@ -69,8 +69,8 @@ const BUTTON = styled.button`
   text-transform: uppercase;
   text-decoration: none;
   background: transparent;
-  padding: 1em 1em 1em 1em;
-  border: 4px solid #494949 !important;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border: 3px solid #494949 !important;
   display: inline-block;
   transition: all 0.4s ease 0s;
   /* font-family: "roboto"; */
