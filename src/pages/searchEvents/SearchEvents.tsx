@@ -1,9 +1,7 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import EventForm from "../../components/eventForm/EventForm";
 import SearchBar from "../../components/searchBar/SearchBar";
 import SearchDivider from "../../components/searchDivider/SearchDivider";
-import SearchResult from "../../components/searchResult/SearchResult";
 import SearchResults from "../../components/searchResults/SearchResults";
 
 const DIV = styled.div`

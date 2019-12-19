@@ -1,16 +1,14 @@
 import React, { FC } from "react";
-import styled from '@emotion/styled';
 import { GroupCardsList } from "./groupsCardList";
 import { GroupCard } from "./groupCard";
 
-interface GroupCardsProps {
+interface GroupCardsProps {}
 
-}
-
-export const GroupCards: FC<GroupCardsProps> = (props) => {
+export const GroupCards: FC<GroupCardsProps> = () => {
   return (
     <>
-      {GroupCardsList && GroupCardsList.map(card => <GroupCard group={card} />)}
+      {GroupCardsList &&
+        GroupCardsList.map(card => <GroupCard group={card} key={card.name} />)}
     </>
   );
 };

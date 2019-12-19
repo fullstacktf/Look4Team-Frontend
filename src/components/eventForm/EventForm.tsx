@@ -2,7 +2,6 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import Input from "../input/Input";
 import Button from "../button/Button";
-import { EventCard } from "../../services/events/models";
 import { useFormInput } from "../../hooks/useFormInput";
 import Request from "superagent";
 

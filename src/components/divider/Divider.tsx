@@ -66,7 +66,10 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
             </div>
           </TitleDivider>
           <AvatarContainer>
-            {friendList && friendList.map(friend => <FriendsAvatars friends={friend} />)}
+            {friendList &&
+              friendList.map(friend => (
+                <FriendsAvatars friends={friend} key={friend.name} />
+              ))}
           </AvatarContainer>
         </FriendsContainer>
       );
@@ -78,18 +81,18 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
 export default Divider;
 
 const ContainerCardsGroups = styled.div`
-  display:flex;
-  flex-direction:row;
-`
+  display: flex;
+  flex-direction: row;
+`;
 
 const Container = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-`
+`;
 
 const TitleDivider = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -105,14 +108,14 @@ const TitleDivider = styled.div`
   & a {
     margin-right: 10px;
   }
-`
+`;
 
 const FriendsContainer = styled.div`
-width: 40%;
-`
+  width: 40%;
+`;
 
 const AvatarContainer = styled.div`
-display:flex;
-flex-direction: row;
-flex-wrap: wrap;
-`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;

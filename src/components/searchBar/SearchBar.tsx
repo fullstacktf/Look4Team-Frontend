@@ -1,14 +1,8 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import Input from "../input/Input";
-import { useFormInput } from "../../hooks/useFormInput";
 
-import Button from "../button/Button";
 export interface SearchBarProps {}
-const DIV = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
+
 const SearchBar: React.FC = () => {
   // const sendform = () => {
   //   console.log("searching");

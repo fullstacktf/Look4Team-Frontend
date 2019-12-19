@@ -1,7 +1,6 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import Divider from "../../components/divider/Divider";
-import Card from "../../components/card/Card";
 import Button from "../../components/button/Button";
 
 export interface EventsProps {}

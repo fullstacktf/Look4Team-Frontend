@@ -1,11 +1,9 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import Divider from "../../components/divider/Divider";
-import Card from "../../components/card/Card";
 import Button from "../../components/button/Button";
-import ButtonTest from "../../components/buttontest/ButtonTest";
 
-export interface GroupsProps { }
+export interface GroupsProps {}
 const DIV = styled.div`
   margin: auto;
   margin-top: 2rem;
@@ -32,7 +30,6 @@ const Groups = () => {
         </a>
       </div>
       <Divider caso="groups" url="" />
-
     </DIV>
   );
 };

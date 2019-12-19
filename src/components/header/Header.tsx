@@ -5,13 +5,7 @@ import HeaderOptions from "../headerOptions/HeaderOptions";
 import Bell from "../bell/Bell";
 import Profile from "../profile/Profile";
 import styled from "@emotion/styled";
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink,
-  Link
-} from "react-router-dom";
-import Events from "../../pages/events/Events";
+import { NavLink } from "react-router-dom";
 
 const HEADER = styled.header`
   background-color: #1f2833;
