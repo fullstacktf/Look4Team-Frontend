@@ -1,0 +1,55 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "prettier",
+        "prettier/@typescript-eslint",
+        "prettier/react"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "semi": [
+            "error",
+            "always"
+        ],
+        "camelcase": "off",
+        "@typescript-eslint/camelcase": ["error", { "properties": "always" }],
+        "prettier/prettier": "error",
+        "react/prop-types": 0,
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            { 
+              "args": "after-used", 
+              "argsIgnorePattern": "^_|^next$" 
+            }
+        ],
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_|^next$" }]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
