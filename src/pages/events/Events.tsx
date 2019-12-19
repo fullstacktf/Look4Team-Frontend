@@ -10,7 +10,7 @@ const DIV = styled.div`
   margin-top: 2rem;
   width: 75%;
 
-  div:nth-child(1) {
+  .buttons {
     text-align: center;
   }
 
@@ -20,18 +20,19 @@ const DIV = styled.div`
 `;
 const Events: React.FC = () => {
   return (
-    <DIV>
-      <div>
-        <a href="add/events">
-          <Button text="CREA UN EVENTO" />
-        </a>
-        <a href="search/events">
-          <Button text="BUSCA UN EVENTO" />
-        </a>
-      </div>
-      <Divider caso="events" />
-      <Card name="Evento partido" photo="" content="Polideportivo" />
-    </DIV>
+    <div>
+      <DIV>
+        <div className="buttons">
+          <a href="events/add">
+            <Button text="CREA UN EVENTO" />
+          </a>
+          <a href="events/search">
+            <Button text="BUSCA UN EVENTO" />
+          </a>
+        </div>
+        <Divider caso="events" url="https://look4.team/api/events" />
+      </DIV>
+    </div>
   );
 };
 

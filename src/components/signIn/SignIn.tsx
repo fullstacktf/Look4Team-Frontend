@@ -33,19 +33,19 @@ const SignIn: React.FC = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <Input
-            label="email"
             name="email"
             type="email"
             value="email"
+            placeholder="Email"
             {...email}
           />
         </div>
         <div>
           <Input
-            label="password"
             name="password"
             type="password"
             value="password"
+            placeholder="Password"
             {...password}
           />
         </div>

@@ -2,64 +2,90 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import Input from "../input/Input";
 import Button from "../button/Button";
+import { EventCard } from "../../services/events/models";
 import { useFormInput } from "../../hooks/useFormInput";
+import Request from "superagent";
 
 export interface EventFormProps {}
 
 const EventForm: React.FC = () => {
-  const name = useFormInput("");
-  const sport = useFormInput("");
-  const description = useFormInput("");
-  const place = useFormInput("");
-  const time = useFormInput("");
-
-  // const [value, setValue] = useState("");
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    // const { name, sport } = e.target.value;
-    console.log(name.value);
-    console.log(sport.value);
-    console.log(description.value);
-    console.log(time.value);
-    console.log(place.value);
-
-    alert("tu evento ha sido creado!");
+  // const { token } = useAuth()
+  const sendform = () => {
+    Request.post("https://look4.team/api/events")
+      .send(inputs)
+      // .set ( {headers: {authorization: `Bearer ${token}`}})c
+      .then(console.log(inputs))
+      .catch(err => console.log("ha sucedido un error", err));
+    // alert("tu evento ha sido creado!");
   };
 
+  const { inputs, handleInputChange, handleSubmit } = useFormInput(sendform);
+
   return (
-    <div>
+    <DIV>
       <FORM onSubmit={handleSubmit}>
-        <Input label="nombre" name="name" type="text" {...name} />
-
-        <Input label="deporte" name="sport" type="text" {...sport} />
-
-        <Input label="lugar" name="place" type="text" {...place} />
-
-        <Input label="hora" name="time" type="text" value="time" {...time} />
         <Input
-          label="descripción"
+          name="name"
+          type="text"
+          onChange={handleInputChange}
+          value={inputs.name}
+          placeholder="Nombre"
+        />
+
+        <Input
+          placeholder="Sport"
+          name="sport"
+          type="text"
+          onChange={handleInputChange}
+          value={inputs.sport}
+        />
+
+        <Input
+          placeholder="Place"
+          name="place"
+          type="text"
+          onChange={handleInputChange}
+          value={inputs.place}
+        />
+
+        <Input
+          placeholder="Hora"
+          name="datetime"
+          type="datetime-local"
+          onChange={handleInputChange}
+          value={inputs.datetime}
+        />
+        <Input
+          placeholder="Descripción"
           name="description"
           type="text"
-          {...description}
-          // value="description"
+          onChange={handleInputChange}
+          value={inputs.description}
+        />
+
+        <Input
+          placeholder=""
+          name="description"
+          type="file"
+          onChange={handleInputChange}
+          value={inputs.image}
         />
         <div>
           <Button text="CREAR EVENTO" />
         </div>
-        {/* <input type="submit" /> */}
       </FORM>
-    </div>
+    </DIV>
   );
 };
-
 export default EventForm;
 
+const DIV = styled.div`
+  margin: auto;
+  width: 40%;
+  /* background-color: red; */
+`;
 const FORM = styled.form`
-  background-color: #f0f0f0;
-  display: inline-block;
-  padding: 1.5rem;
-  border: 1px solid #c5c6c7;
+  padding: 1.5em;
   border-radius: 2px;
   font-size: 1rem;
 
@@ -68,7 +94,11 @@ const FORM = styled.form`
     padding-top: 1em;
   }
 
-  input:nth-child() {
-    background-color: red;
+  :before {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
   }
 `;

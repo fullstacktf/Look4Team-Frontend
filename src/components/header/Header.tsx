@@ -5,6 +5,13 @@ import HeaderOptions from "../headerOptions/HeaderOptions";
 import Bell from "../bell/Bell";
 import Profile from "../profile/Profile";
 import styled from "@emotion/styled";
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Link
+} from "react-router-dom";
+import Events from "../../pages/events/Events";
 
 const HEADER = styled.header`
   background-color: #1f2833;
@@ -15,6 +22,15 @@ const HEADER = styled.header`
   /* a:nth-child(1) {
     background-color: red;
   } */
+  .active {
+    border-bottom: 3px solid #66fcf1;
+    h1 {
+      color: white;
+    }
+    svg {
+      fill: #66fcf1;
+    }
+  }
 `;
 
 const NAV = styled.nav`
@@ -30,10 +46,12 @@ const NAV = styled.nav`
 const Header: React.FC = () => {
   return (
     <HEADER>
-      <Logo />
+      <a href="/">
+        <Logo />
+      </a>
 
       <NAV className="nav">
-        <a href="/">
+        {/* <a href="/">
           <HeaderOptions text="inicio" />
         </a>
         <a href="/events">
@@ -41,7 +59,18 @@ const Header: React.FC = () => {
         </a>
         <a href="/groups">
           <HeaderOptions text="groups" />
-        </a>
+        </a> */}
+        <NavLink exact activeClassName="active" to="/">
+          <HeaderOptions text="inicio" />
+        </NavLink>
+
+        <NavLink to="/events">
+          <HeaderOptions text="events" />
+        </NavLink>
+
+        <NavLink to="/groups">
+          <HeaderOptions text="groups" />
+        </NavLink>
       </NAV>
 
       <div className="bell">

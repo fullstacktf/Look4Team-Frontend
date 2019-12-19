@@ -1,27 +1,14 @@
 import * as React from "react";
 import Icon from "../icon/Icon";
 import styled from "@emotion/styled";
-
-const DIV = styled.div`
-  display: flex;
-
-  div {
-    margin-left: auto;
-    padding-top: 40px;
-  }
-
-  svg {
-    padding-left: 10px;
-  }
-  p {
-    margin: 0;
-    margin-top: 40px;
-    font-family: "roboto";
-  }
-`;
+import Cards from "../cards/Cards";
+import { GroupCards } from "../groupsCards/groupCards";
+import { FriendsAvatars } from "../friendsAvatar/friendsAvatars";
+import { friendList } from "../friendsAvatar/friendsList";
 
 export interface DividerContainerProps {
   caso: string;
+  url: string;
 }
 //events, groups, friends
 
@@ -29,8 +16,8 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
   switch (caso) {
     case "events":
       return (
-        <div>
-          <DIV>
+        <Container>
+          <TitleDivider>
             <p> Tus eventos </p>
             <div>
               <a href="/search/events">
@@ -40,14 +27,14 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
                 <Icon icon="add" />
               </a>
             </div>
-          </DIV>
-          <hr />
-        </div>
+          </TitleDivider>
+          <Cards />
+        </Container>
       );
     case "groups":
       return (
-        <div>
-          <DIV>
+        <Container>
+          <TitleDivider>
             <p> Tus grupos </p>
             <div>
               <a href="/search/groups">
@@ -57,15 +44,17 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
                 <Icon icon="add" />
               </a>
             </div>
-          </DIV>
-          <hr />
-        </div>
+          </TitleDivider>
+          <ContainerCardsGroups>
+            <GroupCards />
+          </ContainerCardsGroups>
+        </Container>
       );
 
     case "friends":
       return (
-        <div>
-          <DIV>
+        <FriendsContainer>
+          <TitleDivider>
             <p> Amigos </p>
             <div>
               <a href="/search/users">
@@ -75,9 +64,11 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
                 <Icon icon="add" />
               </a>
             </div>
-          </DIV>
-          <hr />
-        </div>
+          </TitleDivider>
+          <AvatarContainer>
+            {friendList && friendList.map(friend => <FriendsAvatars friends={friend} />)}
+          </AvatarContainer>
+        </FriendsContainer>
       );
     default:
       return <p>nada</p>;
@@ -85,3 +76,43 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
 };
 
 export default Divider;
+
+const ContainerCardsGroups = styled.div`
+  display:flex;
+  flex-direction:row;
+`
+
+const Container = styled.div`
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+`
+
+const TitleDivider = styled.div`
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+  margin-bottom: 5px;
+
+  & p {
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-left: 10px;
+  }
+
+  & a {
+    margin-right: 10px;
+  }
+`
+
+const FriendsContainer = styled.div`
+width: 40%;
+`
+
+const AvatarContainer = styled.div`
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+`
