@@ -20,10 +20,10 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
           <TitleDivider>
             <p> Tus eventos </p>
             <div>
-              <a href="/search/events">
+              <a href="/events/search">
                 <Icon icon="search" />
               </a>
-              <a href="/add/events">
+              <a href="/events/add">
                 <Icon icon="add" />
               </a>
             </div>
@@ -37,10 +37,10 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
           <TitleDivider>
             <p> Tus grupos </p>
             <div>
-              <a href="/search/groups">
+              <a href="/groups/search">
                 <Icon icon="search" />
               </a>
-              <a href="/add/groups">
+              <a href="/groups/add">
                 <Icon icon="add" />
               </a>
             </div>
@@ -57,10 +57,10 @@ const Divider: React.FC<DividerContainerProps> = ({ caso }) => {
           <TitleDivider>
             <p> Amigos </p>
             <div>
-              <a href="/search/users">
+              <a href="/users/search">
                 <Icon icon="search" />
               </a>
-              <a href="/add/users">
+              <a href="/users/add">
                 <Icon icon="add" />
               </a>
             </div>

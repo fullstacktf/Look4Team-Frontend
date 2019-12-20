@@ -15,7 +15,7 @@ const EventForm: React.FC = () => {
       // .set ( {headers: {authorization: `Bearer ${token}`}})c
       .then(console.log(inputs))
       .catch(err => console.log("ha sucedido un error", err));
-    // alert("tu evento ha sido creado!");
+    alert("Tu evento ha sido creado con éxito!");
   };
 
   const { inputs, handleInputChange, handleSubmit } = useFormInput(sendform);

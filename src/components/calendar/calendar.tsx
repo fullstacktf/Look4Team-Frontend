@@ -1,13 +1,16 @@
 import React, { FC } from "react";
+import styled from "@emotion/styled";
 
 interface CalendarMiniProps {}
-
+const DIV = styled.div`
+  margin: 3em;
+`;
 export const CalendarMini: FC<CalendarMiniProps> = () => {
   return (
-    <>
+    <DIV>
       <svg
-        width="267"
-        height="208"
+        width="317"
+        height="258"
         viewBox="0 0 267 208"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -216,6 +219,6 @@ export const CalendarMini: FC<CalendarMiniProps> = () => {
           </clipPath>
         </defs>
       </svg>
-    </>
+    </DIV>
   );
 };
